@@ -1,0 +1,28 @@
+{% extends "dashboardapp/base.html" %}
+{% block content %}
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+    <form class="" action="/existingcustomer/" method="GET">{%csrf_token%}
+      Search Record: <input type="text" name="search" placeholder="Enter Vehicle Registration Number" value="">
+      <button type="submit" name="button">Search</button>
+    </form>
+    <hr>
+    {%if data%}
+      {%for d in data%}
+        <!-- {{d.values}}<br><br> -->
+        Customer Name:{{d.rodetails_vehicle.veh_cust.cust_name}}<br>
+        Vehicle Indentity No:{{d.rodetails_vehicle.veh_ident_no}}<br>
+        Vehicle Registration No:{{d.rodetails_vehicle.veh_reg_no}}<br>
+        Vehicle Regis Date:{{d.rodetails_vehicle.veh_reg_date}}<br>
+        Vehicle Name:{{d.rodetails_vehicle.veh_name}}<br>
+        Vehicle Model:{{d.rodetails_vehicle.veh_model}}<br>
+        Vehicle Color{{d.rodetails_vehicle.veh_color}}<br>
+        Vehicle Engine No:{{d.rodetails_vehicle.veh_eng_no}}<br>
+        Vehicle Chassis No:{{d.rodetails_vehicle.veh_chassis_no}}<br>
+        Free Service Remaining:{{d.rodetails_vehicle.veh_free_services_remaining}}<br>
+        <a href="/finalinvoice/{{d.ro_id}}/"> <button type="button" name="button">Final Invoice</button> </a>
+        <hr>
+
+      {%endfor%}
+    {%endif%}
+{%endblock%}

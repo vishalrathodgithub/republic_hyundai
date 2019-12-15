@@ -1,0 +1,18 @@
+{% extends "dashboardapp/header_footer.html" %}
+{% block body %}
+  <body>
+    <form class="form-horizontal" action="/dashboard/" method="post">{% csrf_token %}
+      <div class="row">
+        <div class="col-sm-4">
+        </div>
+        <div class="col-sm-4">
+          <center><h1>Login Page </h1>
+            <br><br>
+          {{form.as_p}}
+          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          <button type="button" class="btn btn-info" disabled style="size:10px;">Forgot Password</button>
+          <button type="submit" class="btn btn-info" style="size:10px;">Login</button>
+          </center>
+        </div>
+    </form>
+{% endblock %}

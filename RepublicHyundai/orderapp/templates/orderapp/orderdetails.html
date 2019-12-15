@@ -1,0 +1,25 @@
+{% extends "dashboardapp/base.html" %}
+{% block content %}
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+        <div class="container">
+            <form class="form-horizontal" action="/orderdetails/" method="post">{%csrf_token%}
+              <div class="form-group">
+                <div class="col-sm-12">
+                  {{form | crispy}}
+                  <button type="submit" class="btn btn-success" style="float:right;">Save and Next </button>
+                </div>
+              </div>
+            </form>
+        </div>
+
+
+    <a href="/order/"><button type="button" name="button">Place Order</button></a>
+    <hr>
+    {%for orddet in ord_det%}
+      Order Product:{{orddet.order_prod}}<br>
+      Order Product Quantity:{{orddet.order_product_quantity}}<br>
+      Order Product Amount:{{orddet.orderdetails_total_amount}}<br><hr>
+    {%endfor%}
+
+{% endblock %}

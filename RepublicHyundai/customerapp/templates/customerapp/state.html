@@ -1,0 +1,15 @@
+{% extends "dashboardapp/base.html" %}
+{% block content %}
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+    <div class="container">
+        <form class="form-horizontal" action="/state/" method="post">{%csrf_token%}
+          <div class="form-group">
+            <div class="col-sm-12">
+              {{form | crispy}}
+              <button type="submit" class="btn btn-success" style="float:right;">Save and Next </button>
+            </div>
+          </div>
+        </form>
+    </div>
+    {% endblock %}

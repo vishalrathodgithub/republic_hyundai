@@ -1,0 +1,27 @@
+{% extends "dashboardapp/base.html" %}
+{% block content %}
+{% load staticfiles %}
+
+<div class="container">
+
+<div class="form-group" style="margin:55px;">
+<div class="row">
+  <div class="col-sm-4">
+
+<p><a class="btn btn-primary btn-lg btn-block" href="/customerdetails/" role="button">Customer Details </a></p>
+<p><a class="btn btn-primary btn-lg btn-block" href="/existingcustomer/" role="button">Existing Customer </a></p>
+
+<p><a class="btn btn-primary btn-lg btn-block" href="/productmaster/" role="button">Product Information </a></p>
+<p><a class="btn btn-primary btn-lg btn-block" href="/orderdetails/" role="button">Order Details </a></p>
+
+<p><a class="btn btn-primary btn-lg btn-block" href="/productinventory/" role="button">Product Inventory </a></p>
+<p><a class="btn btn-primary btn-lg btn-block" href="/vendordetails/" role="button">Vendor Details </a></p>
+</div>
+<div class="col-sm-8">
+  <img src="{% static 'images/HyundaiShowroom.jpg' %}" alt="Vips" style="height:40%;width:66%;float:center;"></img>
+</div>
+</div>
+</div>
+</div>
+
+{% endblock %}

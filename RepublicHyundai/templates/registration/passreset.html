@@ -1,0 +1,10 @@
+{% extends "dashboardapp/base.html" %}
+{% block content %}
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+
+<form class="" action="index.html" method="post">
+  {{form | crispy}}
+</form>
+
+{% endblock %}

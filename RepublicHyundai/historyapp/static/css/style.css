@@ -1,0 +1,21 @@
+
+/* Float the link section to the right */
+.header-center {
+float: center;
+margin: 1%;
+color: violet;
+}
+h1{
+  text-align: center;
+
+}
+
+.footer {
+left: 0;
+bottom: 0;
+width: 100%;
+background-color: white;
+color: black;
+text-align: center;
+
+}

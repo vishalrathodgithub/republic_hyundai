@@ -1,0 +1,13 @@
+{% extends "dashboardapp/base.html" %}
+{% block content %}
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+    <form class="" action="/signup/" method="POST">
+      {%csrf_token%}
+      {{form.as_p}}
+
+      <input type="submit" name="" value="Submit">
+
+    </form>
+
+{% endblock %}
